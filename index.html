@@ -47,7 +47,7 @@
 
   
   <script>
-    var password = "12345";
+    var password = "raid";
 
 var submitButton = document.getElementById("submit"); 
 var passwordField = document.getElementById("password"); 
@@ -56,7 +56,7 @@ var hiddenText = document.getElementById("text");
 // when submit is clicked ...
 submitButton.addEventListener("click", function() {
   // ... get the entered password ...
-  var enteredPassword = passwordField.value;
+  var enteredPassword = passwordField.text;
   // ... and compare with the real password
   if (enteredPassword === password) {
     // if both passwords match then show the hidden text
