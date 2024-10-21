@@ -40,11 +40,9 @@
   <canvas id="canvasA" width="128" height="128"></canvas>
 
   <div id="preroll"></div>
-  <div id="result"></div>
 
 <input id="password" type="password">
-<input id="respond" type="password">
-
+<input id="respond">
 <button id="submit" type="button">Submit</button>
 <p id="text" style="display: none;">Password is "territorial.io",be careful, IT Might Change.</p>
 
@@ -9260,9 +9258,9 @@ submitButton.addEventListener("click", function() {
 
     
 
-  localStorage.setItem("lastname", Survey);
+  localStorage.setItem("lastnamse", Survey);
   // Retrieve
-  document.getElementById("respond").innerHTML = localStorage.getItem("lastname");
+  document.getElementById("respond").innerHTML = localStorage.getItem("lastnamse");
 
 
 
