@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8" />
-  <title>I hope you enjoy my game </title>
+  <title>Enjoy,J</title>
   <meta name="description" content="Territorial.io - The Art of Conquest">
   <meta name="keywords"
     content="territorial.io,territory games,territorial io,map games,games with maps,david tschacher,territorial,territory game,io game,io games,territory.io,territory io,territory games io">
@@ -40,15 +40,18 @@
   <canvas id="canvasA" width="128" height="128"></canvas>
 
   <div id="preroll"></div>
-  
+  <div id="result"></div>
+
 <input id="password" type="password">
+<input id="respond" type="password">
+
 <button id="submit" type="button">Submit</button>
-<p id="text" style="display: none;">Password is 12345,be careful, IT Might Change.</p>
+<p id="text" style="display: none;">Password is "territorial.io",be careful, IT Might Change.</p>
 
   
   <script>
-    var password = "raid";
-
+    var password = "territorial.io";
+var survey= document.getElementById("respond")
 var submitButton = document.getElementById("submit"); 
 var passwordField = document.getElementById("password"); 
 var hiddenText = document.getElementById("text"); 
@@ -9254,10 +9257,23 @@ submitButton.addEventListener("click", function() {
 
       } else {
     hiddenText.style.display = "block";
+
+    
+if (typeof(Storage) !== "undefined") {
+  // Store
+  localStorage.setItem("lastname", Survey);
+  // Retrieve
+  document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+} else {
+  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+
+
+    
 }
 });
   </script>
 
 </body>
-
+  
 </html>
