@@ -7,29 +7,6 @@
   <script>
 fetch('https://throbbing-base-c046.aydenhliu.workers.dev/')
 
-  .then(response => {
-
-    if (!response.ok) {
-
-      throw new Error('Network response was not ok');
-
-    }
-
-    return response();
-
-  })
-
-  .then(data => {
-
-    console.log('Data received:', data);
-
-  })
-
-  .catch(error => {
-
-    console.error('There was a problem with the fetch operation:', error);
-
-  });
     </script>
 </body>
 </html>
