@@ -2,6 +2,9 @@
 <body>
 
 <p id = "2" > </p>
+  <p id = "3" > </p>
+  <p id = "4" > </p>
+
   <a href = "https://bold-dream-0612.aydenhliu.workers.dev/"> https://bold-dream-0612.aydenhliu.workers.dev/</a>
 
 <button onclick = "Loader()"></button>
@@ -12,7 +15,24 @@
 <script>
   function Loader () {
 document.getElementById("2").innerHTML = USAGE(0);
+ document.getElementById("3").innerHTML = ussafe();
+   
+
   }
+
+
+
+  function ussafe() {
+getText("https://bold-dream-0612.aydenhliu.workers.dev/");
+  async function getText(file) {
+  let myObject = await fetch(file[0]);
+  document.getElementById("4").innerHTML = await myObject.text();
+    return await myObject.text();
+}
+  }
+
+
+  
 function USAGE(x){
 
   fetch('https://bold-dream-0612.aydenhliu.workers.dev/')
