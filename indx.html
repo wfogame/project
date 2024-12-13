@@ -17,23 +17,14 @@ function USAGE(){
 
   fetch('https://bold-dream-0612.aydenhliu.workers.dev/')
   .then(response => {
-    // Check if the request was successful
-    if (!response.ok) {
-      throw new Error('Network response was not ok');
-    }
-    // Parse the response as JSON
-    return response.json();
+  return response.json();
   })
   .then(data => {
     // Handle the JSON data
-    document.getElementById("2").innerHTML = USAGE();
+    
 
   })
-  .catch(error => {
-    // Handle any errors that occurred during the fetch
-    console.error('Fetch error:', error);
-  });
-   
+ 
     
 
 }
