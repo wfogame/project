@@ -4,16 +4,25 @@
 <p id = "2" > </p>
   <a href = "https://bold-dream-0612.aydenhliu.workers.dev/"> https://bold-dream-0612.aydenhliu.workers.dev/</a>
 
+<button onclick = "USAGE()"></button>
   
 </body>
 
 
 <script>
 
-
+function USAGE(){
+    let fetchRes = fetch(
+"https://bold-dream-0612.aydenhliu.workers.dev/");
+    
+// FetchRes is the promise to resolve
+// it by using.then() method
+fetchRes.then(res =>
+    res.json()).then(d => {
 document.getElementById("2").innerHTML = tasks;
-  
+    })
 
+};
     
 </script>
   
