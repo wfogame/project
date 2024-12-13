@@ -4,13 +4,15 @@
 <p id = "2" > </p>
   <a href = "https://bold-dream-0612.aydenhliu.workers.dev/"> https://bold-dream-0612.aydenhliu.workers.dev/</a>
 
-<button onclick = "USAGE()"></button>
+<button onclick = "Loader()"></button>
   
 </body>
 
 
 <script>
-
+  function Loader () {
+document.getElementById("2").innerHTML = USAGE();
+  }
 function USAGE(){
 
   fetch('https://bold-dream-0612.aydenhliu.workers.dev/')
@@ -24,7 +26,8 @@ function USAGE(){
   })
   .then(data => {
     // Handle the JSON data
-document.getElementById("2").innerHTML = data;
+    document.getElementById("2").innerHTML = USAGE();
+
   })
   .catch(error => {
     // Handle any errors that occurred during the fetch
