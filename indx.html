@@ -12,15 +12,26 @@
 <script>
 
 function USAGE(){
-    let fetchRes = fetch(
-"https://bold-dream-0612.aydenhliu.workers.dev/");
+
+  fetch('https://api.example.com/upload', options)
+  .then(response => {
+    // Check if the request was successful
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    // Parse the response as JSON
+    return response.json();
+  })
+  .then(data => {
+    // Handle the JSON data
+document.getElementById("2").innerHTML = data;
+  })
+  .catch(error => {
+    // Handle any errors that occurred during the fetch
+    console.error('Fetch error:', error);
+  });
+   
     
-// FetchRes is the promise to resolve
-// it by using.then() method
-fetchRes.then(res =>
-    res.json()).then(d => {
-document.getElementById("2").innerHTML = tasks;
-    })
 
 };
     
