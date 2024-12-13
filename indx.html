@@ -14,8 +14,8 @@
 
 <script>
   function Loader () {
-document.getElementById("2").innerHTML = USGE(0);
- document.getElementById("3").innerHTML = ussafe("https://bold-dream-0612.aydenhliu.workers.dev/");
+USGE(0);
+ ussafe("https://bold-dream-0612.aydenhliu.workers.dev/");
    
 
                                                  }
@@ -23,7 +23,7 @@ document.getElementById("2").innerHTML = USGE(0);
   function ussafe(s) {
   async function getText(s) {
   let myObject = await fetch(s)[0].inputs.prompt;
-    return await myObject.text();
+  document.getElementById("3").innerHTML = await myObject.text();
 }
   }
 
@@ -35,7 +35,7 @@ function USGE(x){
   .then(response => response.json())
   .then(data => {
     // Handle the JSON data
-return data;
+document.getElementById("2").innerHTML = data;
 
   })
  
