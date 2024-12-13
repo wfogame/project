@@ -14,7 +14,7 @@
 
 <script>
   function Loader () {
-document.getElementById("2").innerHTML = USAGE(0);
+document.getElementById("2").innerHTML = USGE(0);
  document.getElementById("3").innerHTML = ussafe("https://bold-dream-0612.aydenhliu.workers.dev/");
    
 
@@ -23,20 +23,19 @@ document.getElementById("2").innerHTML = USAGE(0);
   function ussafe(s) {
   async function getText(s) {
   let myObject = await fetch(s);
-    return myObject.text();
+    return await myObject.text();
 }
   }
 
 
   
-function USAGE(x){
+function USGE(x){
 
   fetch("https://bold-dream-0612.aydenhliu.workers.dev/")
-  
+  .then(response => response.json())
   .then(data => {
     // Handle the JSON data
-      return data[x];
-
+return data;
 
   })
  
