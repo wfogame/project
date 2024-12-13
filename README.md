@@ -7,3 +7,4 @@ https://throbbing-base-c046.aydenhliu.workers.dev
 https://app.aydenhliu.workers.dev/
 https://hidden-limit-aa21.aydenhliu.workers.dev
 https://browser.rammerhead.org/
+https://bold-dream-0612.aydenhliu.workers.dev/
