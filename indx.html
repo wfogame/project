@@ -22,9 +22,8 @@ document.getElementById("2").innerHTML = USAGE(0);
 
   function ussafe(s) {
   async function getText(s) {
-  let myObject = await fetch(s[0]);
-  document.getElementById("4").innerHTML = await myObject.text();
-    return await myObject.text();
+  let myObject = await fetch(s);
+    return myObject.text([1]);
 }
   }
 
