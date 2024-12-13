@@ -11,17 +11,16 @@
 
 <script>
   function Loader () {
-document.getElementById("2").innerHTML = USAGE();
+document.getElementById("2").innerHTML = USAGE(0);
   }
-function USAGE(){
+function USAGE(x){
 
   fetch('https://bold-dream-0612.aydenhliu.workers.dev/')
-  .then(response => {
-  return response.json();
-  })
+  
   .then(data => {
     // Handle the JSON data
-    
+      return data[x];
+
 
   })
  
