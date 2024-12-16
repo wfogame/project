@@ -22,7 +22,7 @@ USGE(0);
 
   function ussafe(s) {
   async function getText(s) {
-  let myObject = await fetch(s)[0].inputs.prompt;
+  let myObject = await fetch(s,0)[0].inputs.prompt;
   document.getElementById("3").innerHTML = await myObject.text();
 }
   }
@@ -31,7 +31,7 @@ USGE(0);
   
 function USGE(x){
 
-  fetch("https://bold-dream-0612.aydenhliu.workers.dev/")
+  fetch("https://bold-dream-0612.aydenhliu.workers.dev/",x)
   .then(response => response.json())
   .then(data => {
     // Handle the JSON data
