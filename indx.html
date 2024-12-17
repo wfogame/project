@@ -14,7 +14,7 @@
 
 <script>
   function Loader () {
-USGE("x");
+USGE("type");
  ussafe("https://bold-dream-0612.aydenhliu.workers.dev/");
    
 
@@ -22,7 +22,7 @@ USGE("x");
 
   function ussafe(s) {
   async function getText(s) {
-  let myObject = await fetch(s,0)[0].inputs.prompt;
+  let myObject = await fetch(s,"type")[0].inputs.prompt;
   document.getElementById("3").innerHTML = await myObject.text();
 }
   }
@@ -30,16 +30,20 @@ USGE("x");
 
   
 function USGE(x){
-
+import tasks from ./index.js
   fetch("https://bold-dream-0612.aydenhliu.workers.dev/",x)
-  .then(response => response.json())
+  .then(response => document.getElementById("4").innerHTML = tasks;)
+
   .then(data => {
+     
     // Handle the JSON data
-document.getElementById("2").innerHTML = data;
+document.getElementById("4").innerHTML = data;
 
   })
  
-    
+ fetch('https://bold-dream-0612.aydenhliu.workers.dev/') // api for the get request
+    .then(response => response.json())
+    .then(data => document.getElementById("2").innerHTML = data);   
 
 }
     
